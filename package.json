@@ -1,0 +1,11 @@
+{
+  "name": "gocube-stuff",
+  "scripts": {},
+  "dependencies": {
+    "cubing": "^0.10.6"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "typescript": "^3.9.6"
+  }
+}
