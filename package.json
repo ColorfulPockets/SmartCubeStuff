@@ -2,7 +2,7 @@
   "name": "gocube-stuff",
   "scripts": {},
   "dependencies": {
-    "cubing": "^0.11.0"
+    "cubing": "^0.11.1"
   },
   "devDependencies": {
     "parcel": "^1.12.4",
