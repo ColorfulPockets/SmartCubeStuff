@@ -1,8 +1,7 @@
 import { parse } from "cubing/alg";
 import { BluetoothPuzzle, connect, MoveEvent, OrientationEvent } from "cubing/bluetooth";
-import { KPuzzle, Puzzles } from "cubing/kpuzzle";
 import { TwistyPlayer } from "cubing/twisty";
-import { Quaternion, Vector3 } from "three";
+import { Vector3 } from "three";
 
 export class BluetoothApp {
     private twisty: TwistyPlayer
