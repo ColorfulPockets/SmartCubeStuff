@@ -1,13 +1,3 @@
-import { parse } from "cubing/alg";
-import { connect, BluetoothPuzzle, MoveEvent, OrientationEvent } from "cubing/bluetooth";
+import { BluetoothApp } from "./app";
 
-document.querySelector("#connect").addEventListener("click", async () => {
-    console.log(parse("[R, U]"))
-    const puzzle: BluetoothPuzzle = await connect()
-    puzzle.addMoveListener( (e: MoveEvent) => {
-        console.log(e.latestMove)
-    })
-    puzzle.addOrientationListener( (e: OrientationEvent) => {
-        console.log(e.quaternion)
-    } )
-})
+(window as any).app = new BluetoothApp()
