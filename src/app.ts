@@ -1,11 +1,11 @@
 import { parse } from "cubing/alg";
 import { BluetoothPuzzle, connect, MoveEvent, OrientationEvent } from "cubing/bluetooth";
 import { KPuzzle, Puzzles } from "cubing/kpuzzle";
-import { Twisty } from "cubing/twisty";
+import { TwistyPlayer } from "cubing/twisty";
 import { Quaternion, Vector3 } from "three";
 
 export class BluetoothApp {
-    private twisty: Twisty
+    private twisty: TwistyPlayer
 
     constructor() {
         window.addEventListener("DOMContentLoaded", this.setup.bind(this))
@@ -14,13 +14,11 @@ export class BluetoothApp {
     setup() {
         document.querySelector("#connect").addEventListener("click", this.onConnectButtonPress.bind(this))
 
-        // TODO update to new syntax
-        const twistyElem = document.createElement("twisty")
-        this.twisty = new Twisty(twistyElem, { 
+        this.twisty = new TwistyPlayer({ 
             alg: parse("")
         })
         
-        document.body.appendChild(twistyElem)
+        document.body.appendChild(this.twisty)
 
         setTimeout(this.hackInitialOrientation.bind(this), 100)
     }
