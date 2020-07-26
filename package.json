@@ -2,7 +2,7 @@
   "name": "gocube-stuff",
   "scripts": {
     "dev":"npx parcel src/index.html",
-    "build":"npx parcel build src/index.html"
+    "build":"npx parcel build --public-dir . src/index.html"
   },
   "dependencies": {
     "cubing": "^0.11.1"
